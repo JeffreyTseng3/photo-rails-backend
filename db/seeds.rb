@@ -9,6 +9,10 @@
 require 'open-uri'
 
 User.destroy_all
+Photo.destroy_all 
+Comment.destroy_all
+CollectionItem.destroy_all
+
 
 jeffrey = User.create!(
     username: 'jeffreytseng',
