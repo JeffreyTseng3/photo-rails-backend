@@ -1,0 +1,1 @@
+json.array! @items, partial: 'collection_items/item', as: :item
