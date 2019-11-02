@@ -22,10 +22,7 @@ photo1=jeffrey.photos.create!(
     title:'cactus'
 )
 photo_file1=open("https://dropify-seeds.s3.amazonaws.com/photo-collection/hannah-crd-8RpP_YwERcU-unsplash.jpg")
-photo1.image_file.attach(
-    io: photo_file1, 
-    filename: 'cactus1.jpg'
-)
+photo1.image_file.attach(io:photo_file1,filename:'cactus1.jpg')
 photo1.save!
 
 
