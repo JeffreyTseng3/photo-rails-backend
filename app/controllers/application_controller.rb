@@ -1,13 +1,14 @@
 class ApplicationController < ActionController::Base
-  before_action :set_csrf_cookie
+  # before_action :set_csrf_cookie
+   protect_from_forgery with: :null_session
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     render json: { error: "Not Found" }, status: :not_found
   end
 
-  rescue_from ActionController::InvalidAuthenticityToken do |e|
-    render json: { error: "Invalid token" }, status: :unauthorized
-  end
+  # rescue_from ActionController::InvalidAuthenticityToken do |e|
+  #   render json: { error: "Invalid token" }, status: :unauthorized
+  # end
 
 private
 
