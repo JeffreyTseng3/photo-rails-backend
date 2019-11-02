@@ -14,9 +14,9 @@ Comment.destroy_all
 CollectionItem.destroy_all
 
 
-jeffrey = User.create!(
+jeffrey = User.create!({
     username: 'jeffreytseng',
-    password: 'password'
+    password: 'password'}
 )
 
 

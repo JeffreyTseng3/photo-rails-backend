@@ -17,8 +17,10 @@ require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-ActiveSupport::LoggerSilence
+
 Bundler.require(*Rails.groups)
+
+ActiveSupport::LoggerSilence
 
 module PhotoRails
   class Application < Rails::Application
