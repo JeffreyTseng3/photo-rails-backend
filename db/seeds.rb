@@ -20,4 +20,7 @@ jeffrey = User.create!(
 )
 
 
-photo1 = jeffrey.photos.create({title: 'cactus1'})
+photo1 = jeffrey.photos.create(title: 'cactus1')
+photo_file1 = open("/Users/jeffreytseng/Desktop/photo-rails-backend/app/assets/images/cacti")
+photo1.image_file.attach(io: photo_file1, filename: 'cactus1.jpg')
+photo1.save!
