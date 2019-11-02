@@ -21,7 +21,7 @@ jeffrey = User.create!(
 
 
 
-photo1 = jeffrey.photos.create(title: 'cactus1')
+photo1 = Photo.create(title: 'cactus', user_id: jeffrey.id)
 photo1.save!
 
 
