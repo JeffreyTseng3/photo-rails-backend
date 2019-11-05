@@ -1,5 +1,5 @@
 class CollectionItemsController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def index
     @items = current_user.collection_items.includes(:photo)
