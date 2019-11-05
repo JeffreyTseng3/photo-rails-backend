@@ -31,12 +31,8 @@ module PhotoRails
     # the framework and any gems in your application.
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins /localhost:*/
-
-        resource '*', 
-          headers: :any, 
-          methods: [:get, :post, :put, :patch, :delete, :options, :head],
-          credentials: true
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
   end
